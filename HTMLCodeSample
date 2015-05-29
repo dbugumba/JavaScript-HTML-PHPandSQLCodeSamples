@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC
+  "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-type" content="text/html; charset=iso-8859-1"/>
+<title>Submit runner time</title>
+
+<script type="text/javascript" src="JavaScriptFunctions.js"> </script>
+
+</head>
+
+<body>
+
+<hr/>
+<h1>Submit runner time</h1>
+<hr/>
+Note: all fields marked '*' are mandatory.
+<p/>
+
+<form name="submitrunnertime" onsubmit="return validate();" method="post" action="http://dpb285.tt284.open.ac.uk/b2files/TMA02_MySQLFunctions.php ">
+	  
+<table>
+
+<!-- RunnerID must not contain less than one or more than 5 digit characters -->
+<tr><td>Runner ID*</td>
+<td><input type="text" name="RunnerID" id="RunnerID" size="5" maxlength="5"/></td>
+</tr>
+
+<!-- EventID must not contain less than one or more than 5 digit characters -->
+<tr><td>Event ID*</td>
+<td><input type="text" name="EventID" id="EventID" size="5" maxlength="5"/></td>
+</tr>
+
+<!-- The date entered must match the YYYY-MM-DD date format -->
+<tr><td>Date (YYYY-MM-DD)*</td>
+<td><input type="text" name="Date" id="Date" size="10" maxlength="10"/></td>
+</tr>
+
+<!-- The finish time entered must match the HH:MM:SS time format -->
+<tr><td>Finish time (HH:MM:SS)*</td>
+<td><input type="text" name="FinishTime" id="FinishTime" size="8" maxlength="8"/></td>
+</tr>
+
+<!-- Position must not contain less than one or more than 5 digit characters -->
+<tr><td>Position*</td>
+<td><input type="text" name="Position" id="Position" size="5" maxlength="5"/></td>
+</tr>
+
+<!-- CategoryID must not contain less than one or more than 2 digit characters -->
+<tr><td>Category ID*</td>
+<td><input type="text" name="CategoryID" id="CategoryID" size="2" maxlength="2"/></td>
+</tr>
+
+<!-- The AgeGrade entered must have a two decimal places percentage format -->
+<tr><td>Age grade*</td>
+<td><input type="text" name="AgeGrade" id="AgeGrade" size="5" maxlength="5"/></td>
+</tr>
+
+<tr><td>Personal best</td>
+<td><input type="Boolean" name="PB" id="PB" size="1" maxlength="1"/></td>
+</tr>
+
+</table>
+
+<input type="submit" name="submitrunnertime" value="submit" />
+<hr/>
+
+</form>
+</body>
+</html>
+
