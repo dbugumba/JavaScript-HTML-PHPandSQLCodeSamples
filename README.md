@@ -24,14 +24,15 @@ I accomplished these two operations through two procedures:
 I had to be extremely careful when handling some of these values in PHP and while building SQL statements. For example a value such as ‘00:55:12’ had to be quoted inside an SQL statement to be legal. So if I had built the start of an SQL statement in a variable $start and I wanted to append this value which is help in '$_POST['FinishTime']' then to do this and create an SQL statement I needed to introduce quotes: 
 $myQuery = $start . "'" . $_POST['FinishTime'] . "'";
 
-My PHP needed to: 
+My PHP needed to:
+
 1.	establish a connection with some database using a username and password authorised by a server administrator. 
 
 2.	take the values posted by the form, for example $_POST['RunnerID'], as the value for the RunnerID item and put them into an appropriate SQL statement to insert the data into the Results table. 
 
 3.	output a message for the user confirming what data has been added to the table. This can be done by simply echoing a message and the data values to the user. 
 
-This last item ‘3’ simply means that after submitting the form the user must be returned an HTML page confirming the data has been stored.
+The last item ‘3’ simply means that after submitting the form the user must be returned an HTML page confirming the data has been stored.
 
 # The Data and Database Tables
 The project demonstration draws on relational database theory by employing a simplified database table system. This includes some details of the database tables that are used to hold information about events, event organisers, runners, runner categories and event results. To enter data into a database, a set of forms is used. Each form can submit data to one or more of the database tables. However for my project demo, I only needed to employ a single table. So, here I will focus on just the ‘Results’ table.
